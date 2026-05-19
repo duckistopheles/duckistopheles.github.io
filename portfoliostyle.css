@@ -1,0 +1,49 @@
+body{
+    font-family: 'Courier New', monospace;
+}
+p.basic {
+  background-color: yellow;
+  border-radius: 25px;
+  padding: 20px;
+}
+img {
+  background-color: black;
+  border-radius: 25px;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: auto;
+}
+a.MeinButton:link, a.MeinButton:visited {
+  border-radius: 25px;
+  background-color: white;
+  color: black;
+  padding: 14px 25px;
+  width: max(50px,20%);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a.MeinButton:hover, a.MeinButton:active {
+  background-color: red;
+}
+
+.container {
+  display: flex;
+  background: #298a3b;
+  background: linear-gradient(90deg,rgba(41, 138, 59, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  mask: radial-gradient(30px at 30px 50%,#0000 calc(100% - 1px),#000) -30px/100% 55.5px;
+  border-radius: 25px;
+  padding: 10px;
+}
+.container.space-around {
+  justify-content: space-around;
+}
+.container.space-between {  
+  justify-content: space-between;
+}
