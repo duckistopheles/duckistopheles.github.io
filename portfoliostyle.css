@@ -6,7 +6,7 @@ p.basic {
   border-radius: 25px;
   padding: 20px;
 }
-img {
+img.turning {
   background-color: black;
   border-radius: 25px;
   padding: 20px;
@@ -16,13 +16,49 @@ img {
   margin: auto;
   transition: transform .7s ease-in-out;
 }
-img:hover{
+img.turning:hover{
   cursor: default;
   transform: rotate(9deg);
 }
 
-a.MeinButton:link, a.MeinButton:visited {
+img.folding {
+  background-color: black;
   border-radius: 25px;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: auto;
+  clip-path: polygon(0 0, 27% 79%, 100% 100%, 0% 100%);
+  transition: clip-path 1s;
+}
+
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin: auto;
+}
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 1px red solid;
+}
+.image2 {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  border: 1px green solid;
+}
+
+img.folding:hover {
+  clip-path: polygon(0 0, 96% 2%, 100% 100%, 0% 100%);
+}
+
+a.MeinButton:link, a.MeinButton:visited {
+  border-radius: 0px;
   background-color: white;
   color: black;
   padding: 14px 25px;
@@ -39,13 +75,14 @@ a.MeinButton:hover, a.MeinButton:active {
   background-color: red;
 }
 
+.stackcontainer{
+  
+}
+
 .container {
   display: flex;
   background: #298a3b;
   background: linear-gradient(90deg,rgba(41, 138, 59, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
-  mask: 
-   radial-gradient(14px at 75% 100%,#0000 98%,#000) 50% calc(100% - 14px)/56px 100% repeat-x,
-    radial-gradient(14px at 25% 50%,#000 99%,#0000 101%) bottom/56px 28px repeat-x;
   border-radius: 25px;
   padding: 10px;
   padding-bottom: 50px;
