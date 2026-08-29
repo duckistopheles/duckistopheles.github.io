@@ -88,7 +88,11 @@ a.MeinButton:hover, a.MeinButton:active {
   padding: 10px;
 
 }
-
+.column.project {
+  width: 66%;
+  border: 10px solid red;
+  background-color: #298a3b;
+}
 .left {
   width: 33%;
 }
@@ -155,8 +159,16 @@ ul ::marker {font-size:inherit;}
   border-radius: 10px;
   clip-path: polygon(0 0, 26% 0, 38% 0, 61% 0, 80% 0, 100% 0, 100% 15%, 100% 39%, 100% 61%, 100% 87%, 100% 100%, 74% 100%, 56% 100%, 37% 100%, 15% 100%, 1% 99%, 0% 72%, 0 47%, 0 22%);
   transition: clip-path .4s ease-in-out;
+  max-width: 500px;
+  max-height: 400px;
 }
 
 .projectPreview:hover{
   clip-path: polygon(4% 1%, 18% 8%, 38% 7%, 58% 8%, 78% 2%, 97% 4%, 95% 21%, 98% 41%, 95% 67%, 98% 87%, 92% 97%, 76% 98%, 57% 97%, 38% 98%, 20% 93%, 0 96%, 3% 70%, 3% 45%, 7% 19%);
 }
+hr {
+  border: none;
+  border-top: 5px hidden rgb(0, 0, 0);
+}
+
+/*------------------------------ gallery*/
