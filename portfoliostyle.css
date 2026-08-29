@@ -1,12 +1,19 @@
 body{
     font-family: 'Courier New', monospace;
+    background-image: url(squarecross.png);
+    background-size: 20%;
 }
-p.basic {
+.basic {
   background-color: yellow;
-  border-radius: 25px;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  overflow:auto;
+  margin-bottom: 10px;
 }
-img.turning {
+
+
+
+.turning {
   background-color: black;
   border-radius: 25px;
   padding: 20px;
@@ -16,12 +23,11 @@ img.turning {
   margin: auto;
   transition: transform .7s ease-in-out;
 }
-img.turning:hover{
-  cursor: default;
+.turning:hover{
   transform: rotate(9deg);
 }
 
-img.folding {
+.folding {
   background-color: black;
   border-radius: 25px;
   padding: 20px;
@@ -33,27 +39,7 @@ img.folding {
   transition: clip-path 1s;
 }
 
-.parent {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: block;
-  margin: auto;
-}
-.image1 {
-  position: relative;
-  top: 0;
-  left: 0;
-  border: 1px red solid;
-}
-.image2 {
-  position: absolute;
-  top: -30px;
-  left: 30px;
-  border: 1px green solid;
-}
-
-img.folding:hover {
+.folding:hover {
   clip-path: polygon(0 0, 96% 2%, 100% 100%, 0% 100%);
 }
 
@@ -75,10 +61,6 @@ a.MeinButton:hover, a.MeinButton:active {
   background-color: red;
 }
 
-.stackcontainer{
-  
-}
-
 .container {
   display: flex;
   background: #298a3b;
@@ -92,4 +74,89 @@ a.MeinButton:hover, a.MeinButton:active {
 }
 .container.space-between {  
   justify-content: space-between;
+}
+
+.row{
+  box-sizing: border-box;
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center; 
+}
+.column {
+  float: left;
+  box-sizing: border-box;
+  padding: 10px;
+
+}
+
+.left {
+  width: 33%;
+}
+
+.right {
+  width: 66%;
+}
+
+@media screen and (max-width: 900px) {
+  .left {
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+  }
+  .column {
+    width: 100%;
+  }
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header{
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  transition: transform .5s ease-in-out, font-weight .3s ease-in-out;
+}
+.header:hover {
+   transform: skew(-0.03turn, 0.5deg);
+   font-weight: 500;
+}
+
+/* <weight>: Use a value from 400 to 700*/
+.pixelify-sans-header {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 96px;
+  color: grad;
+}
+
+.externLink:hover {
+  cursor: pointer;
+}
+
+.ex-list-point {
+  list-style-type: "🎓 ";
+}
+
+.ex-list-floppy {
+  list-style-type: "💾 ";
+}
+ul ::marker {font-size:inherit;} 
+
+.projectPreview{
+  border-radius: 10px;
+  clip-path: polygon(0 0, 26% 0, 38% 0, 61% 0, 80% 0, 100% 0, 100% 15%, 100% 39%, 100% 61%, 100% 87%, 100% 100%, 74% 100%, 56% 100%, 37% 100%, 15% 100%, 1% 99%, 0% 72%, 0 47%, 0 22%);
+  transition: clip-path .4s ease-in-out;
+}
+
+.projectPreview:hover{
+  clip-path: polygon(4% 1%, 18% 8%, 38% 7%, 58% 8%, 78% 2%, 97% 4%, 95% 21%, 98% 41%, 95% 67%, 98% 87%, 92% 97%, 76% 98%, 57% 97%, 38% 98%, 20% 93%, 0 96%, 3% 70%, 3% 45%, 7% 19%);
 }
