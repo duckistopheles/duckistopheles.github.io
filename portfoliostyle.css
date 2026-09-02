@@ -1,12 +1,19 @@
 body{
     font-family: 'Courier New', monospace;
+    background-image: url(squarecross.png);
+    background-size: 20%;
 }
-p.basic {
+.basic {
   background-color: yellow;
-  border-radius: 25px;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  overflow:auto;
+  margin-bottom: 10px;
 }
-img {
+
+
+
+.turning {
   background-color: black;
   border-radius: 25px;
   padding: 20px;
@@ -16,36 +23,53 @@ img {
   margin: auto;
   transition: transform .7s ease-in-out;
 }
-img:hover{
-  cursor: default;
+.turning:hover{
   transform: rotate(9deg);
+}
+
+.folding {
+  background-color: black;
+  border-radius: 25px;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: auto;
+  clip-path: polygon(0 0, 27% 79%, 100% 100%, 0% 100%);
+  transition: clip-path 1s;
+}
+
+.folding:hover {
+  clip-path: polygon(0 0, 96% 2%, 100% 100%, 0% 100%);
 }
 
 a.MeinButton:link, a.MeinButton:visited {
   border-radius: 25px;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   padding: 14px 25px;
   width: max(50px,20%);
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
+  border: 10px solid;
+  border-color: rgba(0, 0, 0, 0);
+  transition: background-color .25s ease-in-out, color .25s ease-in-out,  border-color .25s ease-in-out;
 }
 
 a.MeinButton:hover, a.MeinButton:active {
-  background-color: red;
+  background-color: rgb(255, 251, 0);
+  color: black;
+  border: 10px solid;
+  border-color: black;
 }
 
 .container {
   display: flex;
   background: #298a3b;
   background: linear-gradient(90deg,rgba(41, 138, 59, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
-  mask: 
-   radial-gradient(14px at 75% 100%,#0000 98%,#000) 50% calc(100% - 14px)/56px 100% repeat-x,
-    radial-gradient(14px at 25% 50%,#000 99%,#0000 101%) bottom/56px 28px repeat-x;
   border-radius: 25px;
   padding: 10px;
   padding-bottom: 50px;
@@ -56,3 +80,108 @@ a.MeinButton:hover, a.MeinButton:active {
 .container.space-between {  
   justify-content: space-between;
 }
+
+.row{
+  box-sizing: border-box;
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center; 
+}
+.column {
+  float: left;
+  box-sizing: border-box;
+  padding: 10px;
+
+}
+.column.project {
+  width: 66%;
+  border: 10px solid red;
+  background-color: #298a3b;
+}
+.left {
+  width: 33%;
+}
+
+.right {
+  width: 66%;
+}
+
+@media screen and (max-width: 900px) {
+  .left {
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+  }
+  .column {
+    width: 100%;
+  }
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header{
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  transition: transform .5s ease-in-out, font-weight .3s ease-in-out;
+}
+.header:hover {
+   transform: skew(-0.03turn, 0.5deg);
+   font-weight: 500;
+}
+
+/* <weight>: Use a value from 400 to 700*/
+.pixelify-sans-header {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 96px;
+  color: grad;
+}
+
+.pixelify-sans-button {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 32px;
+}
+
+.externLink:hover {
+  cursor: pointer;
+}
+
+.ex-list-point {
+  list-style-type: "🎓 ";
+}
+
+.ex-list-floppy {
+  list-style-type: "💾 ";
+}
+ul ::marker {font-size:inherit;} 
+
+.projectPreview{
+  border-radius: 10px;
+  clip-path: polygon(0 0, 26% 0, 38% 0, 61% 0, 80% 0, 100% 0, 100% 15%, 100% 39%, 100% 61%, 100% 87%, 100% 100%, 74% 100%, 56% 100%, 37% 100%, 15% 100%, 1% 99%, 0% 72%, 0 47%, 0 22%);
+  transition: clip-path .4s ease-in-out;
+  max-width: 500px;
+  max-height: 400px;
+}
+
+.projectPreview:hover{
+  clip-path: polygon(4% 1%, 18% 8%, 38% 7%, 58% 8%, 78% 2%, 97% 4%, 95% 21%, 98% 41%, 95% 67%, 98% 87%, 92% 97%, 76% 98%, 57% 97%, 38% 98%, 20% 93%, 0 96%, 3% 70%, 3% 45%, 7% 19%);
+}
+hr {
+  border: none;
+  border-top: 5px hidden rgb(0, 0, 0);
+}
+
+/*------------------------------ gallery*/
