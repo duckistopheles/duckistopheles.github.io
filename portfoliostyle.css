@@ -1,6 +1,6 @@
 body{
     font-family: 'Courier New', monospace;
-    background-image: url(squarecross.png);
+    background-image: url(ressources/squarecross.png);
     background-size: 20%;
 }
 .basic {
@@ -24,7 +24,7 @@ body{
   transition: transform .7s ease-in-out;
 }
 .turning:hover{
-  transform: rotate(9deg);
+  transform: rotate(3deg);
 }
 
 .folding {
@@ -166,14 +166,23 @@ a.MeinButton:hover, a.MeinButton:active {
 .ex-list-floppy {
   list-style-type: "💾 ";
 }
+
+.ex-list-contact {
+  list-style-type: "📬";
+}
+
+.ex-list-blue {
+  list-style-type: "🐑";
+}
+
 ul ::marker {font-size:inherit;} 
 
 .projectPreview{
   border-radius: 10px;
   clip-path: polygon(0 0, 26% 0, 38% 0, 61% 0, 80% 0, 100% 0, 100% 15%, 100% 39%, 100% 61%, 100% 87%, 100% 100%, 74% 100%, 56% 100%, 37% 100%, 15% 100%, 1% 99%, 0% 72%, 0 47%, 0 22%);
   transition: clip-path .4s ease-in-out;
-  max-width: 500px;
-  max-height: 400px;
+  width: 315px;
+  max-height: 500px;
 }
 
 .projectPreview:hover{
@@ -184,4 +193,13 @@ hr {
   border-top: 5px hidden rgb(0, 0, 0);
 }
 
+.gameScreenshot{
+  max-width: 800px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.warningBanner{
+  text-align: center;
+}
 /*------------------------------ gallery*/
