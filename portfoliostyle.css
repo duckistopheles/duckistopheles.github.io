@@ -17,9 +17,7 @@ body{
   background-color: black;
   border-radius: 25px;
   padding: 20px;
-  width: 200px;
   height: 200px;
-  display: block;
   margin: auto;
   transition: transform .7s ease-in-out;
 }
@@ -43,8 +41,15 @@ body{
   clip-path: polygon(0 0, 96% 2%, 100% 100%, 0% 100%);
 }
 
+a.MeinButton {
+  position:fixed;
+  left:10;
+  top:10;
+}
+
 a.MeinButton:link, a.MeinButton:visited {
   border-radius: 25px;
+
   background-color: black;
   color: white;
   padding: 14px 25px;
